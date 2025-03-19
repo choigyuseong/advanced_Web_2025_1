@@ -2,13 +2,24 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
+app.use(express.static('public'))
 
+// 🔹 루트 경로('/')에서 index.html 제공
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/public/index.html');
+});
+
+// 🔹 '/name' 엔드포인트 추가
+app.get('/name', (req, res) => {
+    res.send('My name is John');
+});
+
+// 🔹 서버 실행
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
-})
+    console.log(`Example app listening on http://localhost:${port}`);
+});
+
+
 
 // express 설치법
 // 실행하려는 파일인 exServer.js 가 있는 디렉토리에 들어가서 npm init 타이핑

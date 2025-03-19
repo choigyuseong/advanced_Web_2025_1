@@ -1,0 +1,43 @@
+/* 전체 페이지 스타일 */
+body {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* 검색창 컨테이너 */
+.search-container {
+    display: flex;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    padding: 5px;
+    width: 300px;
+    background-color: #f9f9f9;
+}
+
+/* 입력창 스타일 */
+.search-input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    background: transparent;
+}
+
+/* 버튼 스타일 */
+.search-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.search-button:hover {
+    color: blue;
+}
